@@ -1,0 +1,130 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>My portfolio | Akmaral</title>
+    <link rel="stylesheet" href="bootstrap/bootstrap.min.css">
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <header class="site-header" id="home">
+        <nav class="navbar navbar-expand-lg" aria-label="Main navigation">
+            <div class="container">
+                <a class="navbar-brand" href="#home">Akmaral</a>
+                <button class="navbar-toggler" type="button" data-bs-toggle="collapse"
+                        data-bs-target="#menu" aria-controls="menu"
+                        aria-expanded="false" aria-label="Toggle menu">
+                    <span class="navbar-toggler-icon"></span>
+                </button>
+                <div class="collapse navbar-collapse" id="menu">
+                    <ul class="navbar-nav ms-auto">
+                        <li class="nav-item"><a class="nav-link" href="#home">Home</a></li>
+                        <li class="nav-item"><a class="nav-link" href="#projects">Projects</a></li>
+                        <li class="nav-item"><a class="nav-link" href="#about">About</a></li>
+                        <li class="nav-item"><a class="nav-link" href="#contact">Contact</a></li>
+                    </ul>
+                </div>
+            </div>
+        </nav>
+    </header>
+    <main class="container">
+        <section class="intro">
+            <h1>My portfolio</h1>
+            <p>Hi, I'm Akmaral. I study Software Engineering at Astana IT University.</p>
+            <p class="intro-detail">Here are a few pages from my Web Technologies course.</p>
+            <a href="#projects">View my projects</a>
+        </section>
+
+        <section class="section" id="projects">
+            <h2>Projects</h2>
+            <div class="row g-4">
+                <div class="col-12 col-lg-8">
+                    <div class="row g-4">
+                        <div class="col-12 col-md-6">
+                            <article class="project-card">
+                                <img src="images/notes.jpg" alt="Preview of the study notes page" width="760" height="430">
+                                <div class="project-content">
+                                    <h3>Study notes</h3>
+                                    <p>Short notes about HTML, CSS and working on a web page.</p>
+                                    <a href="task0.html">Open page</a>
+                                </div>
+                            </article>
+                        </div>
+                        <div class="col-12 col-md-6">
+                            <article class="project-card">
+                                <img src="images/topics.jpg" alt="Preview of the web topics page" width="760" height="430">
+                                <div class="project-content">
+                                    <h3>Web topics</h3>
+                                    <p>Three topics from my Web Technologies course.</p>
+                                    <a href="task1.html">Open page</a>
+                                </div>
+                            </article>
+                        </div>
+                        <div class="col-12 col-md-6">
+                            <article class="project-card">
+                                <img src="images/plan.jpg" alt="Preview of the study plan page" width="760" height="430">
+                                <div class="project-content">
+                                    <h3>Study plan</h3>
+                                    <p>A simple plan for reading, practice and revision.</p>
+                                    <a href="task2.html">Open page</a>
+                                </div>
+                            </article>
+                        </div>
+                        <div class="col-12 col-md-6">
+                            <article class="project-card">
+                                <img src="images/student.jpg" alt="Preview of the student page" width="760" height="430">
+                                <div class="project-content">
+                                    <h3>Student page</h3>
+                                    <p>A page with links to my projects and profile.</p>
+                                    <a href="task3.html">Open page</a>
+                                </div>
+                            </article>
+                        </div>
+                    </div>
+                </div>
+                <aside class="col-12 col-lg-4">
+                    <div class="sidebar">
+                        <h2>Akmaral Abilkhayir</h2>
+                        <p>Software Engineering student</p>
+                        <p><strong>University</strong><br>Astana IT University</p>
+                        <p><strong>Group</strong><br>SE-2518</p>
+                        <p><strong>GitHub</strong><br>
+                            <a href="https://github.com/akmaralabilhayir-lab" target="_blank" rel="noopener noreferrer">akmaralabilhayir-lab</a>
+                        </p>
+                    </div>
+                </aside>
+            </div>
+        </section>
+
+        <section class="section about" id="about">
+            <h2>About me</h2>
+            <p>I am learning to build websites with HTML and CSS. I also use Bootstrap to arrange content on the page.</p>
+            <p>For now, I work on small pages and practise making them look good on different screens.</p>
+        </section>
+
+        <section class="contact" id="contact">
+            <h2>Contact</h2>
+            <p>You can find my projects on GitHub.</p>
+            <a href="https://github.com/akmaralabilhayir-lab" target="_blank" rel="noopener noreferrer">github.com/akmaralabilhayir-lab</a>
+        </section>
+    </main>
+    <footer class="site-footer">
+        <div class="page-width">
+            <p>Akmaral Abilkhayir &middot; 2026</p>
+            <a href="index.html#home">Back to home</a>
+        </div>
+    </footer>
+    <script src="bootstrap/bootstrap.bundle.min.js"></script>
+    <script>
+        const menu = document.getElementById("menu");
+        document.querySelectorAll("#menu a").forEach(function (link) {
+            link.addEventListener("click", function () {
+                if (menu.classList.contains("show")) {
+                    bootstrap.Collapse.getOrCreateInstance(menu).hide();
+                }
+            });
+        });
+    </script>
+</body>
+</html>
